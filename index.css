@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap");
+:root {
+	--clr-1: #cc3d5c;
+	--clr-2: #cc6174;
+	--clr-3: #d68e9b;
+	--clr-4: #b81b47;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	min-height: 100vh;
+	background: linear-gradient(30deg, #200317, #911844);
+	overflow: hidden;
+}
+
+.womens-day {
+	position: relative;
+	margin: auto;
+	width: min(70vw, 600px);
+	height: min(70vw, 600px);
+}
+
+.cos-box {
+	transform: translateY(-125%);
+	position: relative;
+	z-index: 4;
+}
+
+.cos {
+	display: block;
+	color: #911844;
+	font-family: "Fredoka", sans-serif;
+	font-size: clamp(20px, 5vw, 45px);
+	font-weight: 700;
+	animation: animationTwo 1s infinite;
+}
+
+.womens-day__heart-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.heart-background {
+	position: absolute;
+	z-index: 1;
+	fill: #d68e9b;
+	opacity: 0.2;
+	animation: animationOne 1s infinite;
+}
+
+.heart-main {
+	fill: url(#gradient);
+	position: absolute;
+	z-index: 2;
+	animation: animationTwo 1s infinite;
+	/* animation-delay: 0.1s; */
+}
+
+@keyframes animationOne {
+	0% {
+		transform: scale(1.05);
+	}
+	75% {
+		transform: scale(1.15);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	75% {
+		transform: scale(1.15);
+	}
+	100% {
+		transform: scale(1.05);
+	}
+}
+
+@keyframes animationTwo {
+	0% {
+		transform: scale(0.9);
+	}
+	75% {
+		transform: scale(1.1);
+	}
+	50% {
+		transform: scale(1);
+	}
+	75% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(0.9);
+	}
+}
